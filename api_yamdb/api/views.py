@@ -9,26 +9,17 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from reviews.models import Category, Comment, Genre, Review, Title, User
 
 from api_yamdb import settings
-from reviews.models import Category, Comment, Genre, Review, Title, User
+
 from .filters import TitlesFilter
-from .permissions import (
-    CommentsAndReviewsPermission,
-    IsAdminOrReadOnly,
-    UsersPermission,
-)
-from .serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    EmailSerializer,
-    GenreSerializer,
-    ReviewSerializer,
-    TitleReadSerializer,
-    TitleSerializer,
-    TokenSerializer,
-    UserSerializer,
-)
+from .permissions import (CommentsAndReviewsPermission, IsAdminOrReadOnly,
+                          UsersPermission)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          EmailSerializer, GenreSerializer, ReviewSerializer,
+                          TitleReadSerializer, TitleSerializer,
+                          TokenSerializer, UserSerializer)
 from .utils import GenreCategoryMixin, Round, get_tokens_for_user
 
 
