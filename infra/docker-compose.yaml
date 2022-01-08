@@ -8,7 +8,7 @@ services:
     env_file:
       - ./.env
   web:
-    image: dazze/yamdb_final:latest
+    image: dazze/yamdb_final
     restart: always
     volumes:
       - static_value:/app/static/
