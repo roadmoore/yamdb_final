@@ -42,8 +42,8 @@ jobs:
         uses: docker/build-push-action@v2 
         with:
           push: true
-          tags: dazze/yamdb_final:latest
           context: ./api_yamdb/
+          tags: dazze/yamdb_final
 
   deploy:
     runs-on: ubuntu-latest
